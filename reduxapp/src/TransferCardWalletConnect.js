@@ -25,8 +25,7 @@ const TransferCardWalletConnect = ({connectWallet}) => {
            try {
             console.log(connectWallet,"wallet connect")
   
-            if(connectWallet)
-            {
+           
             const provider= new ethers.providers.Web3Provider(Provider);
             const signer = provider.getSigner();
             ethers.utils.getAddress(values.accountAddress)
@@ -35,10 +34,7 @@ const TransferCardWalletConnect = ({connectWallet}) => {
               value:ethers.utils.parseEther(values.amount)
             });
             settx(tx)
-          }else{
-          
-            setConnect("first connect to metamask")
-          }
+         
            
            
          

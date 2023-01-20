@@ -38,7 +38,7 @@ const WalletConnectCard = () => {
             })
         }
               catch (error) {
-                //console.log(error);
+                console.log(error);
                 return error;
               }
         
@@ -52,7 +52,7 @@ const WalletConnectCard = () => {
       };
 
       const getAccountBalance = (account) => {
-        window.ethereum
+        Provider
           .request({ method: "eth_getBalance", params: [account, "latest"] })
           .then((balance) => {
             dispatch(setBalanceWalletConnect(ethers.utils.formatEther(balance)));
