@@ -1,7 +1,7 @@
 import React from 'react'
 import SimpleForm from './SimpleForm'
 import WalletCard from './WalletCard'
-import NavBar from './redux/NavBar'
+import Navbar from './Navbar'
 import {BrowserRouter as Router,Route, Routes} from "react-router-dom";
 
 
@@ -9,7 +9,7 @@ import {BrowserRouter as Router,Route, Routes} from "react-router-dom";
 const App = () => {
   return (
     <>
-    <NavBar/>
+    <Navbar/>
     <SimpleForm/>
     <WalletCard/>
     </>
